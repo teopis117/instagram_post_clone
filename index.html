@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram P]ost
+    </title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="card">
+        <div class="top">
+            <div class="detalles_usuario">
+                <div class="imagen_perfil">
+                    <img  class="cover"src="Images/logo.jpg" alt="imagen de foto de perfil del usuario">
+                </div>
+                <h3>Diaz Morales <br><span>Chiapas,México</span></h3>
+            </div>
+            <div>
+                <img src="Images/dot.png" alt="imagen de puntos de perfil" class="doto">
+            </div>
+        </div>
+        <div class="imgbx">
+            <img src="Images/bg.jpg" alt="imagen de instagram de fondo" class="cover">
+        </div>
+        <div class="actionbtns">
+            <div class="left">
+                <img src="Images/heart.png" alt="corazon" class="heart" onclick="likeboton()">
+                <img src="Images/comment.png" alt="cimentario">
+                <img src="Images/share.png" alt="compartir">
+            </div>
+            <div class="right">
+                <img src="Images/bookmark.png" alt="">
+            </div>
+        </div>
+        <h4 class="likes">3,654 likes</h4>
+        <!-- recordando que la etiqueta tipo <b></b> nos sirve para poder resaltar el texto en negritas -->
+        <h4 class="mensaje"><b>Diaz Morales</b>Gracias,por tu amor  <span> #cards</span><span>#html</span> <span>#css</span></h4>
+        <h4 class="comentarios">Ver los 245 comentarios</h4> 
+        <div class="agregarcomentarios">
+            <div class="imagen_perfil">
+                <img src="Images/user.jpg" alt="" class="cover">
+            </div>
+            <input  class="texto" type="text" name="agregar comentarios" placeholder="Agrega un comentario" id="">
+        </div>
+        <h5 class="tiempopost">hace 4 horas</h5>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>

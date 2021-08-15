@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+    /* Agregamos los estilos iniciales para darle un formateo a la pagina  */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body
+{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+/* leí por ahí que es recomendado colocar los colores con valores hexadecimales ya que puede que el navegador que nuestro ususario utilice no reconozca las palabras */
+background: #fff;
+}
+
+.card
+{
+    /* cuando colocamos el potion relative dentro de el podremos mover los elementos que querramos con absolute osea que este sera nuestro elemento padre */
+    position: relative;
+    width: 360px;
+    /* la propiedad de min height nos sirve para definir una altura minima de un elemtno dado ya que impide que height llegue a ser mas pequeña que la especificada por min height */
+    min-height: 400px;
+    background: #Fff;
+    /* en este caso los valores que tendran por orden el box shadow seran los siguites 
+    1.-desplzamiento de la sombra horizontal
+    2.-desplzamiento de la sombra verticalmente
+    3.-difuminado
+    4.-color*/
+    box-shadow: 15px 15px 60px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+}
+
+.card .top
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .top .detalles_usuario
+{
+    display: flex;
+    align-items: center;
+}
+.card .top .detalles_usuario .imagen_perfil , .agregarcomentarios .imagen_perfil
+{
+    position: relative;
+    width: 36px;
+    height: 36px; 
+    border-radius: 50%;
+    /* la propiedad de overflow nos ayuda para poder eliminar el excende de un contenido a nivel de bloque */
+    overflow: hidden;
+    margin-right: 8px;
+}
+
+
+/* al hacer esta parte del codigo nos damos cuenta que la imagen del logo se redimensiona de mejor manera */
+.cover
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* agregaremos algo de estilo a nuestro encabezado de perfil */
+.card .top .detalles_usuario h3
+{
+    font-size: 16px;
+    color: #4d4d4f;
+    font-weight: 500;
+    line-height: 1em;
+}
+
+.card .top .detalles_usuario h3 span
+{
+    /* haremos un poco mas pequeño a la ubicacion de nuestro card */
+    font-size: 0.75em;
+}
+
+
+.doto
+{
+    transform: scale(0.6);
+    cursor: pointer;
+}
+
+/* empezaremos a diseñar los iconos como lo son el de megusta,compartir y comentar ademas de poder alinearlos entre si */
+.imgbx
+{
+    position: relative;
+    width: 100%;
+    height: 320px;
+    margin: 10px 0 15px;
+}
+
+
+/* alinearlos uno con otro */
+.actionbtns
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* determinar el tamaño de ambos */
+.actionbtns img
+{
+    max-width: 24px;
+    cursor: pointer ;
+}
+
+.actionbtns .left img
+{
+    margin-right: 8px;
+}
+
+/* empezaremos a trabajar con la parte de los detalles de los comentarios y post */
+.likes
+{
+font-weight: 500;
+margin-top: 5px;
+font-size: 16px;
+color: #4d4d4f;
+}
+
+.mensaje
+{
+    font-weight: 400;
+    margin-top: 5px;
+    color: #777;
+    line-height: 1.5em;
+}
+.mensaje b
+{
+    color: #262626;
+}
+
+.mensaje span
+{
+    cursor: pointer;
+    color: #1d92ff;
+}
+
+.comentarios
+{
+    margin-top: 10px;
+    font-weight: 400;
+    color: #999;
+    cursor: pointer;
+}
+.agregarcomentarios
+{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.texto
+{
+    width: 100%;
+    border: none;
+    /* border vs outline los contornos no ocupan espacio y son dibujados por encima del elemento */
+    outline: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: #262626;
+}
+
+.texto::placeholder
+{
+color: #777;
+}
+
+.tiempopost
+{
+    margin-top: 10px;
+    font-weight: 500;
+    color: #777;
+}
